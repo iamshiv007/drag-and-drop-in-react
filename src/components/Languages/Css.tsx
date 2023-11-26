@@ -1,5 +1,5 @@
 import { Card, CardBody, Image, Textarea } from '@chakra-ui/react';
-import cssLogo from 'https://raw.githubusercontent.com/luis-moguea/languages-dnd/1f52e07cb961a23ab61cf30639786995a8860847/src/assets/css-png.png';
+import cssLogo from "../../assets/css-png.png";
 import { useEffect } from 'react';
 
 const Css = () => {

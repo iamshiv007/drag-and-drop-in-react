@@ -1,4 +1,6 @@
-# React + TypeScript + Vite
+# React drag and drop
+
+![gif](https://raw.githubusercontent.com/iamshiv007/drag-and-drop-in-react/main/src/assets/Vite%20%2B%20React%20%2B%20TS%20-%2027%20November%202023.gif)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

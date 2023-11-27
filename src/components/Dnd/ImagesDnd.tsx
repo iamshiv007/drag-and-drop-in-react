@@ -28,6 +28,7 @@ const imagesDnd = () => {
   return (
     <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
       <SortableContext strategy={rectSortingStrategy} items={languageImage}>
+        <Flex width={"100vw"} minHeight={"100vh"} justifyContent={"center"} alignItems={"center"}>
         <Flex
           justifyItems="center"
           alignItems={"center"}
@@ -38,10 +39,12 @@ const imagesDnd = () => {
           padding="2em"
           flexWrap={"wrap"}
           gap={8}
+          maxWidth={"500px"}
         >
           {languageImage.map((image, index) => (
             <ImagesItems key={index} image={image}></ImagesItems>
           ))}
+        </Flex>
         </Flex>
       </SortableContext>
     </DndContext>

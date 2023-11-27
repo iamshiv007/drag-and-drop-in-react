@@ -1,22 +1,18 @@
 import { Image } from '@chakra-ui/react';
 import { useSortable } from '@dnd-kit/sortable';
 import { CSS } from '@dnd-kit/utilities';
-import { useMediaQuery } from '@chakra-ui/react';
 
 interface Props {
   image: string;
 }
 
 const ImagesItems = ({ image }: Props) => {
-  const { listeners, attributes, setNodeRef, transform, transition } =
+  const { listeners, attributes, setNodeRef, transform } =
     useSortable({ id: image });
 
   const style = {
-    transform: CSS.Transform.toString(transform),
-    transition,
+    transform: CSS.Translate.toString(transform)
   };
-
-  const [isHigherThan480] = useMediaQuery('(min-width: 480px)');
 
   return (
     <Image
@@ -24,7 +20,8 @@ const ImagesItems = ({ image }: Props) => {
       ref={setNodeRef}
       {...listeners}
       {...attributes}
-      width={isHigherThan480 ? '50px' : '80px'}
+      width={'80px'}
+      height={"100%"}
       src={image}
     />
   );
